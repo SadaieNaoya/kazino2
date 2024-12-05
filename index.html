@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブラックジャック</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title">ブラックジャック</h1> <!-- タイトルにIDを追加 -->
+        </header>
+        <main>
+            <div id="playButton" class="text">Play</div>
+
+            <!-- プレイヤーとディーラーのSUM表示エリア -->
+            <div id="gameInfo" style="display: none;"> <!-- 初期状態で非表示 -->
+                <div id="dealerSumDisplay" class="sumDisplay">ディーラー: 0</div>
+                <div id="playerSumDisplay" class="sumDisplay">プレイヤー: 0</div>
+            </div>
+
+            <!-- HITとSTANDボタンのエリア -->
+            <div id="gameControls" style="display: none;">
+                <button id="hitButton" class="button">HIT</button>
+                <button id="standButton" class="button">STAND</button>
+            </div>
+
+            <!-- 結果表示エリア -->
+            <div id="resultDisplay" style="display: none;">
+                <p id="resultMessage" class="resultMessage"></p> <!-- クラスを追加 -->
+                <button id="resetButton" class="button">OK</button>
+            </div>
+            
+        </main>
+    </div>
+
+    <!-- ローディング動画 -->
+    <video id="loadingVideo" src="img/coin3.mp4" preload="auto"></video>
+
+    <script src="index.js"></script>
+</body>
+</html>

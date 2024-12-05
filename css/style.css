@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("img/23007652_m.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 90vw;
+  height: 90vh;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* 中央寄せ */
+  text-align: center;
+}
+
+#title {
+  font-size: 3.75em; /* 1.5倍 */
+  padding: 15px;
+  background-color: black;
+  color: white;
+  display: inline-block;
+}
+
+#playButton {
+  font-size: 3.75em; /* 1.5倍 */
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+#gameInfo {
+  display: flex;
+  justify-content: center; /* 中央寄せ */
+  gap: 20px;
+  width: 100%;
+  padding: 15px;
+}
+
+.sumDisplay {
+  color: white;
+  background-color: black;
+  padding: 7.5px 15px;
+  border-radius: 5px;
+}
+
+#dealerSumDisplay {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+#playerSumDisplay {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+#gameControls {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.button {
+  padding: 15px 22.5px;
+  cursor: pointer;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #666;
+}
+
+#resultDisplay {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8em; /* 1.5倍 */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#loadingVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: none;
+  z-index: 9999;
+}
+
+.resultMessage {
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* ====== PC版 (1.5倍) ====== */
+@media (min-width: 769px) {
+  #dealerSumDisplay,
+  #playerSumDisplay {
+    font-size: 2.7em; /* 1.5倍 */
+  }
+
+  .button {
+    font-size: 1.5em; /* 1.5倍 */
+  }
+}
+
+/* ====== スマホ向け調整 ====== */
+@media (max-width: 768px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+    justify-content: center; /* 中央寄せ */
+    align-items: center; /* 中央寄せ */
+  }
+
+  #title {
+    font-size: 2em;
+  }
+
+  #playButton {
+    font-size: 2em;
+  }
+
+  #gameInfo {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center; /* 中央寄せ */
+  }
+
+  .sumDisplay {
+    font-size: 1.8em;
+    padding: 5px;
+  }
+
+  #dealerSumDisplay,
+  #playerSumDisplay {
+    font-size: 1.8em; /* スマホのサイズ */
+    top: 5%;
+    text-align: center; /* 中央寄せ */
+  }
+
+  #gameControls {
+    bottom: 10%;
+    flex-direction: column;
+    align-items: center; /* 中央寄せ */
+  }
+
+  .button {
+    font-size: 1em;
+    padding: 8px 12px;
+  }
+
+  #resultDisplay {
+    font-size: 1em;
+    text-align: center; /* 中央寄せ */
+  }
+}
